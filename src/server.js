@@ -1,8 +1,8 @@
 import express from 'express';
 import bodyParser from "body-parser";
 import mysql from 'mysql2';
-import {userRoutes} from "./Routes/user.routes.ts";
-import {addressRoutes} from "./Routes/address.routes.ts";
+import {userRoutes} from "./Routes/user.routes.js";
+import {addressRoutes} from "./Routes/address.routes.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
