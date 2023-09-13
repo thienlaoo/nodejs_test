@@ -1,4 +1,4 @@
-import express from 'express';
+const express = require('express');
 import {getSingleUser} from "../Controllers/user.controller";
 import {createNewUser} from "../Controllers/user.controller";
 export const userRoutes = express.Router();
