@@ -6,6 +6,7 @@ import {updateAddress} from "../Controllers/address.controller.js";
 import {deleteAddress} from "../Controllers/address.controller.js";
 import {validateCreateAddress} from "../Validation/Address/validate.address.js";
 import {validateUpdateAddress} from "../Validation/Address/validate.address.js";
+import {getAddressesByUserId} from "../Controllers/address.controller.js";
 
 export const addressRoutes = express.Router();
 
@@ -14,3 +15,4 @@ addressRoutes.get('/addresses/:id', express.json(), getSingleAddress);
 addressRoutes.get('/addresses', express.json(), getAllAddresses);
 addressRoutes.patch('/addresses/:id', validateUpdateAddress, updateAddress);
 addressRoutes.delete('/addresses/:id', express.json(), deleteAddress);
+addressRoutes.get('/users/:userId/addresses', getAddressesByUserId);

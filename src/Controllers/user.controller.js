@@ -1,5 +1,5 @@
 import {User} from '../Models/User/index.js';
-
+import { Address } from '../Models/Address/index.js';
 import {validationResult} from "express-validator";
 
 export const createNewUser = async (req, res) => {
@@ -131,4 +131,5 @@ export const updateUser = async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 };
+
 

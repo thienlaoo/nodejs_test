@@ -122,3 +122,23 @@ export const deleteAddress = async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 };
+
+export const getAddressesByUserId = async (req, res) => {
+    try {
+        const { userId } = req.params;
+        const addresses = await Address.findAll({
+            where: { userId },
+        });
+
+        if (!addresses || addresses.length === 0) {
+            res.status(404).json({ error: 'No addresses found for this user' });
+            return;
+        }
+
+        res.json(addresses);
+    } catch (error) {
+        console.error('Error fetching addresses:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+

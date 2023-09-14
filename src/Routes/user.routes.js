@@ -15,3 +15,4 @@ userRoutes.get('/users/:id', getSingleUser);
 userRoutes.get('/users', getAllUsers);
 userRoutes.delete('/users/:id', deleteUser);
 userRoutes.patch('/users/:id', validateUpdateUser, updateUser);
+

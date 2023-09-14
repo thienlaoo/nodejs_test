@@ -4,9 +4,10 @@ fetch('http://localhost:3000/addresses', {
         'Content-Type': 'application/json'
     },
     body: JSON.stringify({
+        "id":2,
         "userId": 1,
         "country": "США",
-        "state": "Калифорния",
+        "state": "state",
         "city": "Лос-Анджелес",
         "zipCode": "90001",
         "address": "123 Main St"
